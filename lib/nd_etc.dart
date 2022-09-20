@@ -6,7 +6,7 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 void enableCurlLogger(
   Iterable<Dio> dios, {
   bool debugModeOnly = true,
-  bool? printOnSuccess,
+  bool printOnSuccess = true,
   bool convertFormData = true,
 }) =>
     enableInterceptor(
@@ -21,7 +21,7 @@ void enableCurlLogger(
 void ndEnableCurlLogger(
   Iterable<Dio> dios, {
   bool debugModeOnly = true,
-  bool? printOnSuccess,
+  bool printOnSuccess = true,
   bool convertFormData = true,
 }) =>
     enableCurlLogger(dios,
@@ -38,9 +38,9 @@ void enablePrettyLogger(
   Iterable<Dio> dios, {
   bool debugModeOnly = true,
   bool request = true,
-  bool requestHeader = false,
-  bool requestBody = false,
-  bool responseHeader = false,
+  bool requestHeader = true,
+  bool requestBody = true,
+  bool responseHeader = true,
   bool responseBody = true,
   bool error = true,
   int maxWidth = 90,
@@ -66,9 +66,9 @@ void ndEnablePrettyLogger(
   Iterable<Dio> dios, {
   bool debugModeOnly = true,
   bool request = true,
-  bool requestHeader = false,
-  bool requestBody = false,
-  bool responseHeader = false,
+  bool requestHeader = true,
+  bool requestBody = true,
+  bool responseHeader = true,
   bool responseBody = true,
   bool error = true,
   int maxWidth = 90,
